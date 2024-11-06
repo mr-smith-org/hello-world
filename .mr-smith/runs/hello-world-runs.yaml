@@ -1,0 +1,25 @@
+initial:
+  description: "Create a simple 'Hello World' in Go"
+  steps:
+    - form:
+        fields:
+          - input:
+              label: "What is your project package name?"
+              out: packageName 
+
+          - input:
+              label: "What message do you want to print?" #
+              out: msg
+
+    - log: "creating structure for {{.data.packageName}}"
+
+    - create:
+        from: base.yaml
+
+    - log: Base structure created successfully!
+
+
+    - cmd: go mod init {{.data.packageName}}
+    - cmd: go mod tidy
+
+    - cmd: go run main.go

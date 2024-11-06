@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	// fmt.Print("Hello, Kuma!")
+	// fmt.Print("Hello, Mr. Smith!")
 	fmt.Println("{{ .data.msg }}")
 }

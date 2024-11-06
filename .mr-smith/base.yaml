@@ -1,0 +1,9 @@
+global:
+  packageName: "{{.data.packageName}}"
+
+structure:
+  main.go:
+    template: templates/Main.go
+
+    data:
+      msg: "{{ .data.msg }}"
